@@ -6,7 +6,6 @@ let kurang = document.getElementById("kurang");
 let kali = document.getElementById("kali");
 let bagi = document.getElementById("bagi");
 let pangkat = document.getElementById("pangkat");
-let modulus = document.getElementById("modulus");
 let hapus = document.getElementById("hapus");
 
 function penjumlahan(x, y){
@@ -79,15 +78,6 @@ pangkat.addEventListener("click", function(){
     let paragraph = document.createElement("p");
     paragraph.classList.add('paragraph-style');
     paragraph.innerHTML = num1.value + "<sup>" + num2.value + "</sup> = " + perpangkatan(parseInt(num1.value), parseInt(num2.value));
-    hasilContainer.appendChild(paragraph);
-    num1.value = '';
-    num2.value = '';
-})
-
-modulus.addEventListener("click", function(){
-    let paragraph = document.createElement("p");
-    paragraph.classList.add('paragraph-style');
-    paragraph.innerHTML = num1.value + " % " + num2.value + " = " + modulo(parseInt(num1.value), parseInt(num2.value));
     hasilContainer.appendChild(paragraph);
     num1.value = '';
     num2.value = '';
