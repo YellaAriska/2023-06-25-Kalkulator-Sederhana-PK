@@ -5,6 +5,7 @@ let tambah = document.getElementById("tambah");
 let kurang = document.getElementById("kurang");
 let kali = document.getElementById("kali");
 let bagi = document.getElementById("bagi");
+let pangkat = document.getElementById("pangkat");
 let hapus = document.getElementById("hapus");
 
 function penjumlahan(x, y){
@@ -24,6 +25,11 @@ function pengalian(x, y){
 
 function pembagian(x, y){
     let s = x / y;
+    return s
+}
+
+function perpangkatan(x, y){
+    let s = x ** y;
     return s
 }
 
@@ -58,6 +64,15 @@ bagi.addEventListener("click", function(){
     let paragraph = document.createElement("p");
     paragraph.classList.add('paragraph-style');
     paragraph.innerHTML = num1.value + " ÷ " + num2.value + " = " + pembagian(parseInt(num1.value), parseInt(num2.value));
+    hasilContainer.appendChild(paragraph);
+    num1.value = '';
+    num2.value = '';
+})
+
+pangkat.addEventListener("click", function(){
+    let paragraph = document.createElement("p");
+    paragraph.classList.add('paragraph-style');
+    paragraph.innerHTML = num1.value + "<sup>" + num2.value + "</sup> = " + perpangkatan(parseInt(num1.value), parseInt(num2.value));
     hasilContainer.appendChild(paragraph);
     num1.value = '';
     num2.value = '';
