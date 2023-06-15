@@ -5,6 +5,7 @@ let tambah = document.getElementById("tambah");
 let kurang = document.getElementById("kurang");
 let kali = document.getElementById("kali");
 let bagi = document.getElementById("bagi");
+let hapus = document.getElementById("hapus");
 
 function penjumlahan(x, y){
     let s = x + y;
@@ -60,4 +61,11 @@ bagi.addEventListener("click", function(){
     hasilContainer.appendChild(paragraph);
     num1.value = '';
     num2.value = '';
+})
+
+hapus.addEventListener("click", function(){
+    while (hasilContainer.firstChild) {
+        hasilContainer.removeChild(hasilContainer.lastChild);
+      }
+
 })
